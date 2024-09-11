@@ -1,0 +1,2 @@
+C:/msys64/ucrt64/bin/ar.exe qc liblab_lib.a CMakeFiles/lab_lib.dir/src/countUnits.cpp.obj
+C:/msys64/ucrt64/bin/ranlib.exe liblab_lib.a
