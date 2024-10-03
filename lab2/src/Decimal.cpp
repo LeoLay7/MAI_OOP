@@ -7,12 +7,13 @@ Decimal::Decimal() {
 
 Decimal::Decimal(const std::initializer_list<unsigned char> &t) {
     size_t leadingZeros = 0;
+    bool countZeros = true;
     for (auto c : t) {
         if (!std::isdigit(c)) throw std::invalid_argument("chars should be a digits");
-        if (c == '0') {
+        if (countZeros && c == '0') {
             leadingZeros++;
         } else {
-            break;
+            countZeros = false;
         }
     }
     _size = t.size() - leadingZeros;

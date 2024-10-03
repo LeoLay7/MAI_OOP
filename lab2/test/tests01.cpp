@@ -23,8 +23,8 @@ TEST(test_02, basic_test_set) {
 
     bool greater1 = (var1 > var2); // false
     bool greater2 = (var2 > var1); // true
-    ASSERT_TRUE(greater1);
-    ASSERT_FALSE(greater2);
+    ASSERT_FALSE(greater1);
+    ASSERT_TRUE(greater2);
 
 
     bool less1 = (var1 < var2); // true;
@@ -37,14 +37,15 @@ TEST(test_03, basic_test_set) {
     Decimal var1 = Decimal("20");
     Decimal var2 = Decimal("1000");
     Decimal var3 = Decimal("10");
+
     Decimal add_result = Decimal("1020");
-    Decimal remove_result = Decimal("980");
+    Decimal remove_result = Decimal("990");
 
     var1 += var2;
-    bool result = (add_result == var1);
-    ASSERT_TRUE(result);
+    bool result1 = (add_result == var1);
+    ASSERT_TRUE(result1);
 
     var2 -= var3;
-    result = (remove_result == var2);
-    ASSERT_TRUE(result);
+    bool result2 = (remove_result == var2);
+    ASSERT_TRUE(result2);
 }
