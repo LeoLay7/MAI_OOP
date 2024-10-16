@@ -70,5 +70,7 @@
         "variant": "cpp",
         "format": "cpp",
         "text_encoding": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "enabled",
+    "cmake.sourceDirectory": "/workspaces/OOP/lab1"
 }
