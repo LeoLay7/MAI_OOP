@@ -19,6 +19,8 @@ class Figure {
         virtual std::istream& read(std::istream& is) = 0;
         virtual std::ostream& print(std::ostream& os) const = 0;
 
+        virtual Figure* clone() const =0;
+
         friend std::istream& operator>>(std::istream& is, Figure& figure) {
             return figure.read(is);
         }

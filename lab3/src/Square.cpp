@@ -5,6 +5,11 @@
 Square::Square(double x, double y, double sideLength)
     : _leftUpper(x, y), _sideLength(sideLength) {}
 
+Square::Square(const Square& other) {
+    _sideLength = other._sideLength;
+    _leftUpper = other._leftUpper;
+}
+
 Coordinates Square::getLeftUpper() const {
     return _leftUpper;
 }
@@ -71,9 +76,13 @@ std::istream& Square::read(std::istream& is) {
 }
 
 std::ostream& Square::print(std::ostream& os) const {
-    os << "Square with upper left corner at (" << _leftUpper.getX() << ", " 
-           << _leftUpper.getY() << ") and side length " << _sideLength << '\n';
+    os << "Квадрат с левой верхней вершиной (" << _leftUpper.getX() << ", " 
+           << _leftUpper.getY() << ") и длиной стороны " << _sideLength << '\n';
     return os;
+}
+
+Figure* Square::clone() const {
+    return new Square(*this);
 }
 
 Square::~Square() {

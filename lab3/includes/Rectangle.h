@@ -8,6 +8,7 @@ class Rectangle: public Figure {
         double _width;
     public:
         Rectangle(double x, double y, double width, double height);
+        Rectangle(const Rectangle& other);
 
         Coordinates geometricalCenter() const override;
         operator double() const override;
@@ -18,6 +19,8 @@ class Rectangle: public Figure {
 
         std::istream& read(std::istream& is) override;
         std::ostream& print(std::ostream& os) const override;
+
+        Figure* clone() const override;
 
         Coordinates getLeftUpper() const;
         double getWidth() const;

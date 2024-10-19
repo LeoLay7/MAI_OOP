@@ -5,6 +5,7 @@ class FigureArray {
     private:
         Figure** _array;
         int _size;
+        int _capacity;
     public:
         FigureArray(int n);
         FigureArray(std::initializer_list<Figure*> init);
@@ -12,6 +13,7 @@ class FigureArray {
         FigureArray(FigureArray&& other) noexcept;
 
         void set(int index, Figure* figure);
+        void append(Figure* figure);
         Figure* get(int index) const;
 
         std::ostream& getCoordinates(std::ostream& os) const;

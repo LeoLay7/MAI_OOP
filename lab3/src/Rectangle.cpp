@@ -5,6 +5,12 @@
 Rectangle::Rectangle(double x, double y, double width, double height)
     : _leftUpper(x, y), _width(width), _height(height) {}
 
+Rectangle::Rectangle(const Rectangle& other) {
+    _width = other._width;
+    _height = other._height;
+    _leftUpper = other._leftUpper;
+}
+
 Coordinates Rectangle::getLeftUpper() const {
     return _leftUpper;
 }
@@ -77,12 +83,15 @@ std::istream& Rectangle::read(std::istream& is) {
 }
 
 std::ostream& Rectangle::print(std::ostream& os) const {
-    os << "Rectangle with upper left corner at (" << _leftUpper.getX() << ", " 
-        << _leftUpper.getY() << ") and width " << _width << " and height "
-        << _height << "\n";
+    os << "Прямоугольник с левой верхней вершиной" << _leftUpper << ", шириной " 
+        << _width << "и высотой " << _height << "\n";
     return os;
 }
 
+Figure* Rectangle::clone() const {
+    return new Rectangle(*this);
+}
+
 Rectangle::~Rectangle() {
-    // Деструктор может быть пустым, так как не требуется явного освобождения ресурсов
+    
 }

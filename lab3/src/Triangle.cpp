@@ -14,6 +14,12 @@ Triangle::Triangle(double x1, double y1, double x2, double y2, double x3, double
     _third = vertices[2];
 }
 
+Triangle::Triangle(const Triangle& other) {
+    _first = other._first;
+    _second = other._second;
+    _third = other._third;
+}
+
 std::vector<Coordinates> Triangle::getVertices() const {
     return {_first, _second, _third};
 }
@@ -79,12 +85,15 @@ std::istream& Triangle::read(std::istream& is) {
 
 
 std::ostream& Triangle::print(std::ostream& os) const {
-    os << "Triangle:\n" 
+    os << "Треугольник с вершинами:\n" 
         << _first.getX() << " " << _first.getY() << "\n"
         << _second.getX() << " " << _second.getY() << "\n"
         << _third.getX() << " " << _third.getY() << "\n";
     return os;
 }
 
+Figure* Triangle::clone() const {
+    return new Triangle(*this);
+}
 
 Triangle::~Triangle() {}

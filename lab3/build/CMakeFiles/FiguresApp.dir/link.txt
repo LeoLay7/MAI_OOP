@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/FiguresApp.dir/main.cpp.o CMakeFiles/FiguresApp.dir/src/Coordinates.cpp.o CMakeFiles/FiguresApp.dir/src/FigureArray.cpp.o CMakeFiles/FiguresApp.dir/src/Rectangle.cpp.o CMakeFiles/FiguresApp.dir/src/Square.cpp.o CMakeFiles/FiguresApp.dir/src/Triangle.cpp.o -o FiguresApp 
