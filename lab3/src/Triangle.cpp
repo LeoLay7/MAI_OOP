@@ -7,7 +7,7 @@ Triangle::Triangle(double x1, double y1, double x2, double y2, double x3, double
     std::vector<Coordinates> vertices = {
         Coordinates(x1, y1), Coordinates(x2, y2), Coordinates(x3, y3)
     };
-    std::sort(vertices.begin(), vertices.end()); // Сортируем вершины
+    std::sort(vertices.begin(), vertices.end());
 
     _first = vertices[0];
     _second = vertices[1];
@@ -79,7 +79,7 @@ std::istream& Triangle::read(std::istream& is) {
     double x1, y1, x2, y2, x3, y3;
     is >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 
-    *this = Triangle(x1, y1, x2, y2, x3, y3);  // Используем оператор присваивания
+    *this = Triangle(x1, y1, x2, y2, x3, y3);
     return is;
 }
 

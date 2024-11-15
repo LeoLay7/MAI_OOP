@@ -42,7 +42,7 @@ Figure& Rectangle::operator=(const Figure& other) {
         throw std::invalid_argument("Other is not a Rectangle");
     }
 
-    _leftUpper = otherRec.getLeftUpper(); // do move
+    _leftUpper = otherRec.getLeftUpper();
     _width = otherRec.getWidth();
     _height = otherRec.getHeight();
     return *this;
@@ -92,6 +92,4 @@ Figure* Rectangle::clone() const {
     return new Rectangle(*this);
 }
 
-Rectangle::~Rectangle() {
-    
-}
+Rectangle::~Rectangle() {}

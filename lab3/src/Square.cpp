@@ -29,7 +29,6 @@ Square::operator double() const {
 }
 
 Figure& Square::operator=(const Figure& other) {
-    // Добавить удаление Coordinates _leftUpper
     if (this == &other) {
         return *this;
     }
@@ -85,6 +84,4 @@ Figure* Square::clone() const {
     return new Square(*this);
 }
 
-Square::~Square() {
-    // Деструктор может быть пустым, так как не требуется явного освобождения ресурсов
-}
+Square::~Square() {}
