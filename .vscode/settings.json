@@ -69,7 +69,8 @@
         "typeinfo": "cpp",
         "variant": "cpp",
         "format": "cpp",
-        "text_encoding": "cpp"
+        "text_encoding": "cpp",
+        "shared_mutex": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.default.cppStandard": "c++20",

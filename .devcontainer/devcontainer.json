@@ -6,8 +6,7 @@
     "extensions": [
         "ms-vscode.cpptools",
         "vscode.cpptools-extension-pack",
-        "ms-vscode.cmake-tools",
-        "plibither8.remove-comments"
+        "ms-vscode.cmake-tools"
     ],
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash"
