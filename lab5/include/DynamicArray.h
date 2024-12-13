@@ -59,15 +59,14 @@ public:
         bool operator==(const Iterator& other) const { return ptr == other.ptr; }
         bool operator!=(const Iterator& other) const { return ptr != other.ptr; }
     };
-
-    // Методы для итераторов
+    
     Iterator begin() { return Iterator(_array.get()); }
     Iterator end() { return Iterator(_array.get() + _size); }
 
     explicit DynamicArray(std::pmr::memory_resource* resource = std::pmr::get_default_resource())
         : allocator(resource), _array(nullptr), _size(0), _capacity(0) {}
 
-    ~DynamicArray() {
+    virtual ~DynamicArray() {
         clear();
     }
 
@@ -76,14 +75,6 @@ public:
             allocate_new_array((_capacity == 0) ? 1 : _capacity * 2);
         }
         std::construct_at(&_array[_size], value);
-        ++_size;
-    }
-
-    void push_back(T&& value) {
-        if (_size == _capacity) {
-            allocate_new_array((_capacity == 0) ? 1 : _capacity * 2);
-        }
-        std::construct_at(&_array[_size], std::move(value));
         ++_size;
     }
 
@@ -102,11 +93,6 @@ public:
 
     size_t size() const { return _size; }
     size_t capacity() const { return _capacity; }
-
-    const T& operator[](size_t index) const {
-        assert(index < _size);
-        return _array[index];
-    }
 
     T& operator[](size_t index) {
         assert(index < _size);

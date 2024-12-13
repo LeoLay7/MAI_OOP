@@ -1,7 +1,6 @@
 #include <memory_resource>
 #include <memory>
 #include <list>
-#include <vector>
 #include <iostream>
 #include <cstddef>
 #include <stdexcept>

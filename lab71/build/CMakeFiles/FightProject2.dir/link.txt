@@ -1,0 +1,1 @@
+/usr/local/bin/c++  -Werror=maybe-uninitialized CMakeFiles/FightProject2.dir/src/Dragon.cpp.o CMakeFiles/FightProject2.dir/src/NPC.cpp.o CMakeFiles/FightProject2.dir/src/knight.cpp.o CMakeFiles/FightProject2.dir/src/Frog.cpp.o CMakeFiles/FightProject2.dir/src/main.cpp.o -o FightProject2 

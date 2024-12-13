@@ -70,7 +70,8 @@
         "variant": "cpp",
         "format": "cpp",
         "text_encoding": "cpp",
-        "shared_mutex": "cpp"
+        "shared_mutex": "cpp",
+        "complex": "cpp"
     },
     "C_Cpp.errorSquiggles": "enabled",
     "C_Cpp.default.cppStandard": "c++20",
