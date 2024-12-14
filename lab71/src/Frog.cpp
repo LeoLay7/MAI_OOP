@@ -43,6 +43,5 @@ std::ostream& operator<<(std::ostream& os, Frog& Frog) {
 }
 
 bool Frog::accept(std::shared_ptr<NPC> attacker) {
-    // Используем базовую логику из NPC
     return NPC::accept(attacker);
 }

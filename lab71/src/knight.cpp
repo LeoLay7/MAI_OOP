@@ -43,6 +43,5 @@ std::ostream& operator<<(std::ostream& os, Knight& Knight) {
 }
 
 bool Knight::accept(std::shared_ptr<NPC> attacker) {
-    // Используем базовую логику из NPC
     return NPC::accept(attacker);
 }
